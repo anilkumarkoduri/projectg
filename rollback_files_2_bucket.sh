@@ -2,8 +2,9 @@
 
 PATH="$PATH":/path/to/gsutil/
 TEMPFILE=/tmp/files
-BUCKET=gs://milkmoney/
-gsutil ls -R $BUCKET |egrep *.csv > $TEMPFILE
+ICEBUCKET=gs://rockpaperscissorssvalbard/
+BUCKET=gs://rockpaperscissors/
+gsutil ls -R $ICEBUCKET |egrep *.csv > $TEMPFILE
 
 for x in `cat $TEMPFILE`
 do 
